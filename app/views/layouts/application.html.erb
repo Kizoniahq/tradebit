@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TradeBitr ||  Most Reliable Digital Currency Auto-Trading bot  </title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"  content=" Never Lose Your Capital On trade. Get 1% of your Investments daily and more. Let Us Trade For You Using Our Crpto-Trading Software"/>
+    <meta name="keywords" content=" Bitcoin trade, multiply your bitcoin free, bitcoin binary options, Auto-trading Software, Bitcoin trading software, Get Instant Withdrawals /Deposits .  Get 10% referal bonus">
+    <meta name="author" content="Zonia.co ">
+    <meta name="google-site-verification" content="A6sPK_l9gKCjYMaq9hOTxeQ5818v52nWiUcuZ4ZeEr0" />
+
+    <meta name="MobileOptimized" content="320">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<style media="screen">
+.modal{
+  background: rgba(0,0,0,0.1) !important;
+}
+.trd-homepage-six .trd-custom-section {
+    padding: 50px 0 100px !important;
+}
+</style>
+
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106858313-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106858313-1');
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106858313-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+
+  <body class="trd-home-template trd-homepage-six"
+   <% if content_for?(:body_attributes) %>
+    <%= yield(:body_attributes) %>
+  <% end %>>
+      <!-- HEADER -->
+
+
+
+
+    <%= render "shared/header" %>
+    <% if notice %>
+    <div class="container" style="position:absolute; top:100px; left:210px; z-index:10;">
+      <div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-success fade in">
+       <a href="#" class="close" data-dismiss="alert">&times;</a>
+      <p><%= notice %> </p>
+    </div>
+  </div>
+      </div>
+      <% elsif alert %>
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="alert alert-danger fade in">
+             <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <p><%= alert %></p>
+          </div>
+        </div>
+      </div>
+          <% end %>
+
+    <%= yield %>
+    <%= render "shared/footer" %>
+    <script>
+  (function(b,i,t,C,O,I,N) {
+    window.addEventListener('load',function() {
+      if(b.getElementById(C))return;
+      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+    },false)
+  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+</script>
+
+<script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '85763c60-d9f7-4721-b4a5-4e2f114da3f6', f: true }); done = true; } }; })();</script>
+  </body>
+</html>

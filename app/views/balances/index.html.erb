@@ -1,0 +1,88 @@
+<%= render "shared/top" %>
+
+
+<!-- PAGE HEADER -->
+      <section class="trd-page-breadcumb-header">
+          <div class="container">
+              <div class="row">
+
+                  <div class="trd-breadcumb-wrapper col-md-6">
+
+                      <% @balances.take(1).each do |b| %>
+                      <h3> Current Balance ( $ <%= b.balance %>)</h3>
+                      <% end %>
+                  </div>
+
+          </div>
+      </section>
+      <!-- PAGE HEADER END -->
+
+      <!-- PAGE CONTENTS -->
+      <section class="trd-page-contents-wrapper">
+          <div class="container">
+              <div class="row">
+
+                  <!-- Sidebar -->
+                  <div class="trd-sidebar trd-sidebar-left col-md-3 col-sm-4 col-xs-12">
+                      <!-- Widget -->
+                      <div class="btcwdgt-price" bw-theme="light" bw-cur="eur"></div>
+
+                      <div class="trd-sidebar-widget trd-pagelink-widget">
+                          <ul>
+                                <li> Account Updates/History  </li>
+                                <% @balances.take(5).each do |balance| %>
+                              <li>
+                             History   $  <%= balance.balance %>
+                              </li>
+                              <% end %>
+
+
+                          </ul>
+                      </div>
+                      <!-- End -->
+
+                      <!-- Widget -->
+                      <div class="trd-sidebar-widget trd-download-widget">
+                          <p>View <br>Your <span class="trd-highlight-text">Account History</span> from here</p>
+                        
+                          <%= link_to "Account history", balances_history_path, class: "trd-btn" %>
+                      </div>
+                      <!-- End -->
+                  </div>
+                  <!-- Sidebar End -->
+
+                  <!-- Page Contents -->
+                  <div class=" col-md-9 col-sm-8 col-xs-12">
+                      <div class="col-md-12 embed-responsive embed-responsive-16by9">
+
+                            <div style="width:100%; max-width:100% !important;" class="btcwdgt-chart"></div>
+
+
+  </div>
+
+
+
+
+
+              </div>
+                    </div>
+
+
+
+          </div>
+        </div>
+      </section>
+      <!-- PAGE CONTENTS END -->
+      <section class="trd-page-contents-wrapper">
+          <div class="container">
+            <h1 class="text-center">Latest News </h1>
+              <div class="row">
+                <div class="col-md-6 embed-responsive embed-responsive-16by9">
+        <div class="btcwdgt-news" bw-cur="eur" bw-theme="light"></div>
+        </div>
+        <div class="col-md-6 embed-responsive embed-responsive-16by9">
+<div class="btcwdgt-forum" bw-theme="light"></div>
+</div>
+</div>
+</div>
+</section>
